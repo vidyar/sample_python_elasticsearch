@@ -1,7 +1,7 @@
 import os
 from pyes import *
 
-es_port = os.environ.get("SHIPPABLE_ELASTIC_SEARCH_PORT")
+es_port = 9200
 conn = ES('http://127.0.0.1:{0}'.format(es_port)) # Use HTTP
 try:
     conn.indices.delete_index("test-index")
